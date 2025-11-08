@@ -1,0 +1,46 @@
+{
+	"layer": "top",
+	"modules-left": ["hyprland/workspaces", "custom/playerctl"],
+	"modules-center": ["clock"],
+	"modules-right": ["pulseaudio", "network", "custom/power"],
+
+	"clock": {
+		"interval": 60,
+		"format": "{:%A, %B %d, %Y ⍿ %H:%M}",
+		"tooltip": false
+	},
+
+	"pulseaudio": {
+		"format": "{icon}",
+		"format-muted": "󰖁 ",
+		"format-icons": {
+			"default": ["󰕿 ", "󰖀 ", "󰕾 "]
+		},
+		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+		"tooltip": false
+	},
+
+	"network": {
+		"interface": "enp6s0",
+		"format-ethernet": "󰈁 ",
+		"format-disconnected": "󰈂 ",
+		"tooltip": false
+	},
+
+	"custom/playerctl": {
+		"format": "󰓇  {}",
+		"exec": "playerctl --player=spotify metadata --format '{{ artist }} - {{ title }}' || echo '404 - Not Found'",
+		"on-click": "playerctl --player=spotify play-pause",
+		"on-scroll-up": "playerctl next",
+		"on-scroll-down": "playerctl previous",
+		"interval": 2,
+		"tooltip": false
+	},
+
+	"custom/power": {
+		"format": "󰐥",
+		"tooltip": false,
+		"on-click": "systemctl poweroff",
+		"interval": 0
+	}
+}
