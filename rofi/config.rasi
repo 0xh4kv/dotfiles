@@ -1,1 +1,5 @@
-@theme "~/.config/rofi/themes/gruvbox-dark.rasi"
+configuration {
+	modes: "ssh";
+	font: "mono 12";
+}
+@theme "~/dotfiles/rofi/themes/gruvbox-dark.rasi"
