@@ -47,3 +47,8 @@ window#waybar {
 	margin-left: 10px;
 	margin-right: 10px;
 }
+
+tooltip{
+	background: #282828;
+	border: 1px solid #3c3836;
+}

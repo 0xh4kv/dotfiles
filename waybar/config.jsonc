@@ -2,12 +2,25 @@
 	"layer": "top",
 	"modules-left": ["hyprland/workspaces", "custom/playerctl"],
 	"modules-center": ["clock"],
-	"modules-right": ["pulseaudio", "network", "custom/power"],
+	"modules-right": ["pulseaudio", "network"],
 
 	"clock": {
 		"interval": 60,
 		"format": "{:%A, %B %d, %Y ⍿ %H:%M}",
-		"tooltip": false
+		"tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode"          : "year",
+            "mode-mon-col"  : 3,
+			"weeks-pos"     : "right",
+			"on-scroll"     : 1,
+			"format": {
+				"months":     "<span color='#458588'><b>{}</b></span>",
+				"days":       "<span color='#fbf1c7'><b>{}</b></span>",
+				"weeks":      "<span color='#fbf1c7'><b>W{}</b></span>",
+				"weekdays":   "<span color='#83a598'><b>{}</b></span>",
+				"today":      "<span color='#689d6a'><b><u>{}</u></b></span>"
+			}
+        }
 	},
 
 	"pulseaudio": {
@@ -35,12 +48,5 @@
 		"on-scroll-down": "playerctl previous",
 		"interval": 2,
 		"tooltip": false
-	},
-
-	"custom/power": {
-		"format": "󰐥",
-		"tooltip": false,
-		"on-click": "systemctl poweroff",
-		"interval": 0
 	}
 }
