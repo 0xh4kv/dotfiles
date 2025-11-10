@@ -1,25 +1,24 @@
---  ________          __  .__
---  \_____  \ _______/  |_|__| ____   ____   ______
---   /   |   \\____ \   __\  |/  _ \ /    \ /  ___/
---  /    |    \  |_> >  | |  (  <_> )   |  \\___ \
---  \_______  /   __/|__| |__|\____/|___|  /____  >
---          \/|__|                       \/     \/
+--    _____             _                  
+--   / ___ \       _   (_)                 
+--  | |   | |____ | |_  _  ___  ____   ___ 
+--  | |   | |  _ \|  _)| |/ _ \|  _ \ /___)
+--  | |___| | | | | |__| | |_| | | | |___ |
+--   \_____/| ||_/ \___)_|\___/|_| |_(___/ 
+--          |_|                            
 
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.cursorline = true
-vim.opt.termguicolors = true
-vim.opt.signcolumn = "yes"
-vim.opt.scrolloff = 8
+local tab = 4
 
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.smartindent = true
+vim.opt.clipboard="unnamedplus"
+vim.opt.relativenumber=true
+vim.opt.number=true
+vim.opt.cursorline=true
 
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
+vim.opt.tabstop=tab
+vim.opt.shiftwidth=tab
+vim.opt.softtabstop=tab
+vim.opt.expandtab=true
 
-vim.opt.mouse = ""
+vim.opt.textwidth=80
+vim.opt.colorcolumn='80'
+vim.opt.wrap=true
+vim.opt.showmode=false
